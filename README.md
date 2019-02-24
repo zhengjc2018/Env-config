@@ -2,7 +2,7 @@
 
 * [1.vagrant安装配置](#1)
 * [2.pyenv安装配置](#2)
-
+* [3.mysql安装](#3)
 
 ### 1. 利用virtualBox+vagrant 搭建本地Linux环境
 
@@ -10,7 +10,7 @@
 ```
 按照默认安装，完成后打开虚拟机，左上角管理-全局设定-常规-默认虚拟电脑位置进行设置
 ```
-1.2. 下载[vagrant](https://www.vagrantup.com) 
+1.2. 下载[vagrant](https://www.vagrantup.com)
 
 ```
 查询需要的虚拟机模板 https://app.vagrantup.com/boxes/search
@@ -23,7 +23,7 @@ vagrant box add ubuntu/trusty64  (ubuntu/trusty64为上一步查询出的模板�
 ```
 1.4. 进入项目目录，并初始化虚拟环境
 ```
-vagrant init ubuntu/trusty64 
+vagrant init ubuntu/trusty64
 ```
 1.5. 启动虚拟环境
 ```
@@ -84,8 +84,8 @@ source ~/.bash_profile
 
 2.5. 查看所有可装的python版本并安装指定版本
 ```
-pyenv install --list 
-pyenv install 3.6.5 
+pyenv install --list
+pyenv install 3.6.5
 ```
 
 2.6. 创建虚拟环境
@@ -109,12 +109,11 @@ wget --no-check-certificate https://github.com/zhengjc2018/python/tree/master/py
 
 如果出现No command 'pyenv' found, 手动执行 source ~/.bash_profile
 ```
-### 3. 安装mariadb
-3.1.  安装mariadb
-
+### 3. 安装mysql
+3.1.  安装mysql
 ```
 sudo apt-get update
-apt-get install mariadb-server python-pymysql
+apt-get install mysql-server
 ```
 3.2. mariadb安全设置
 ```
@@ -125,9 +124,10 @@ mysql_secure_installation
 mysql -uroot -p
 use mysql
 grant all privileges on *.* to root@'%' identified by '123';
+FLUSH PRIVILEGES;
 
 mariadb服务启动与停止
-sudo /etc/init.d/mysql stop 
+sudo /etc/init.d/mysql stop
 sudo /etc/init.d/mysql start
 ```
 
