@@ -1,45 +1,14 @@
 **目录**
 
-* [1.vagrant安装配置](#1)
+* [1.flask migrate](#1)
 * [2.pyenv安装配置](#2)
 * [3.mysql安装](#3)
 
-### 1. 利用virtualBox+vagrant 搭建本地Linux环境
-
-1.1. 下载[virtualbox](https://www.virtualbox.org)
+### 1. migrate更新表结构
 ```
-按照默认安装，完成后打开虚拟机，左上角管理-全局设定-常规-默认虚拟电脑位置进行设置
-```
-1.2. 下载[vagrant](https://www.vagrantup.com)
-
-```
-查询需要的虚拟机模板 https://app.vagrantup.com/boxes/search
-```
-1.3. 添加模板
-
-```
-vagrant box list
-vagrant box add ubuntu/trusty64  (ubuntu/trusty64为上一步查询出的模板名称)
-```
-1.4. 进入项目目录，并初始化虚拟环境
-```
-vagrant init ubuntu/trusty64
-```
-1.5. 启动虚拟环境
-```
-vagrant up
-```
-1.6. ssh 登陆
-
-```
-vagrant ssh或者使用其他软件登陆，默认端口号2222，用户名/密码为vagrant/vagrant
-(使用工具登陆需要设置  的 PasswordAuthentication为yes)
-```
-1.7. 常用命令
-```
-vagrant reload 重新加载虚拟机
-vagrant halt 关闭虚拟机
-vagrant destroy 删除虚拟机
+python manage.py db init
+python manage.py db migrate
+python manage.py db upgrade
 ```
 
 ### 2. 利用pyenv进行python版本管理
