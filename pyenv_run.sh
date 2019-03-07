@@ -15,3 +15,9 @@ sudo apt install gcc make zlib1g-dev libbz2-dev libssl-dev libncurses5-dev libre
 y
 EOF
 pyenv install 3.6.5
+sudo apt-get install redis-server <<EOF
+y
+EOF
+apt install supervisor <<EOF
+y
+EOF

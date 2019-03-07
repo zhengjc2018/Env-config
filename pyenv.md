@@ -3,6 +3,8 @@
 * [1.vagrant安装配置](#1)
 * [2.pyenv安装配置](#2)
 * [3.mysql安装](#3)
+* [4.redis安装](#4)
+* [5.supervisor安装](#5)
 
 ### 1. 利用virtualBox+vagrant 搭建本地Linux环境
 
@@ -130,6 +132,31 @@ mariadb服务启动与停止
 sudo /etc/init.d/mysql stop
 sudo /etc/init.d/mysql start
 ```
+
+### 4. 安装redis
+4.1. 安装
+```
+sudo apt-get install redis-server
+```
+4.2. 常用命令
+```
+/etc/init.d/redis-server stop        停止redis
+/etc/init.d/redis-server start       启动redis
+/etc/init.d/redis-server restart     重启redis
+```
+
+### 5. 安装supervisor
+5.1. 安装
+```
+apt install supervisor
+```
+5.2. 常用命令
+```
+supervisorctl start 服务名            启动任务
+supervisorctl stop 服务名             停止任务
+supervisorctl restart 服务名          重启任务
+```
+
 
 
 
