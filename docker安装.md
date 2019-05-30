@@ -1,7 +1,18 @@
 **目录**
 
-* [1.docker-compose安装配置](#1)
-* [2.docker-ce安装配置](#2)
+* [1.docker-compose安装配置(ubuntu)](#1)
+
+* [2.设置repo](#2)
+
+* [3.docker-ce安装配置](#3)
+
+* [4.jenkins安装配置](#4)
+
+####  原文链接
+
+> <https://docs.docker.com/compose/install/#install-as-a-container>
+>
+> <https://docs.docker.com/install/linux/docker-ce/centos/>
 
 ### 1. Install Compose
 
@@ -63,10 +74,19 @@ sudo apt-get update
 sudo apt-get install docker-ce
 ```
 3.3. test
+
 ```
 sudo docker run hello-world
 ```
 
+### 4. 安装jenkins
 
-
+4.1. 启动jenkins服务
+```
+docker run -d -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
+```
+4.2. 首次登陆获得key
+```
+cat /var/jenkins_home/secrets/initialAdminPassword
+```
 
