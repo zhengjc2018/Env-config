@@ -43,6 +43,9 @@ use mysql
 grant all privileges on *.* to root@'%' identified by '123';
 FLUSH PRIVILEGES;
 
+//注释掉bind-address = 127.0.0.1：
+sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
+
 mariadb服务启动与停止
 sudo /etc/init.d/mysql stop
 sudo /etc/init.d/mysql start
