@@ -171,7 +171,7 @@ pyenv deactivate xxx  -- 手动去激活 python 虚拟环境
 
 2.8. 快速安装指令
 ```
-wget --no-check-certificate https://github.com/zhengjc2018/python/tree/master/pyenv_config/pyenv_run.sh && chmod +x pyenv_run.sh && ./pyenv_run.sh
+wget --no-check-certificate https://github.com/zhengjc2018/Env-config/blob/master/python_env/pyenv_run.sh && chmod +x pyenv_run.sh && ./pyenv_run.sh
 
 如果出现No command 'pyenv' found, 手动执行 source ~/.bash_profile
 ```
