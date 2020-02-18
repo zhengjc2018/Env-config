@@ -110,7 +110,7 @@ wget --no-check-certificate https://github.com/zhengjc2018/python/tree/master/py
 
 如果出现No command 'pyenv' found, 手动执行 source ~/.bash_profile
 ```
-### 2.1. 利用pyenv进行python版本管理(centos环境下)
+### 2.1. 利用pyenv进行python版本管理(ubuntu环境下)
 
 2.0. 设置dns
 ```
@@ -122,8 +122,8 @@ nameserver 8.8.4.4
 
 2.1. 安装git
 ```
-sudo yum update
-sudo yum install git
+sudo apt-get update
+sudo apt-get install git
 ```
 
 2.2. 安装 pyenv
