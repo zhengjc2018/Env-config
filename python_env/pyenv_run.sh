@@ -1,4 +1,5 @@
 #! /bin/sh
+export version=3.7.1
 sudo apt-get update
 sudo apt install -y git
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
@@ -10,6 +11,5 @@ git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/py
 echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bash_profile
 . ~/.bash_profile
 sudo apt install -y gcc make zlib1g-dev libbz2-dev libssl-dev libncurses5-dev libreadline6-dev libsqlite3-dev python-tk python3-tk tk-dev
-pyenv install 3.6.5
-sudo apt-get -y install redis-serverd
-apt install -y supervisor
+wget http://mirrors.sohu.com/python/$v/Python-$version.tar.xz -P ~/.pyenv/cache/;pyenv install $version
+

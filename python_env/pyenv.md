@@ -154,6 +154,12 @@ pyenv install --list
 pyenv install 3.6.5
 ```
 
+2.5.1. 使用搜狐镜像源加速
+```
+v=3.7.1;wget http://mirrors.sohu.com/python/$v/Python-$v.tar.xz -P ~/.pyenv/cache/;pyenv install $v   
+
+```
+
 2.6. 创建虚拟环境
 ```
 pyenv virtualenv 3.6.5 project-01
