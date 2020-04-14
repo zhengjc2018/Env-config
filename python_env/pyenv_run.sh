@@ -10,6 +10,6 @@ echo 'eval "$(pyenv init -)"' >> ~/.bash_profile
 git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
 echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bash_profile
 . ~/.bash_profile
-sudo apt install -y gcc make zlib1g-dev libbz2-dev libssl-dev libncurses5-dev libreadline6-dev libsqlite3-dev python-tk python3-tk tk-dev
+sudo apt install -y gcc make zlib1g-dev libbz2-dev libffi-dev libssl-dev libncurses5-dev libreadline6-dev libsqlite3-dev python-tk python3-tk tk-dev
 wget http://mirrors.sohu.com/python/$v/Python-$version.tar.xz -P ~/.pyenv/cache/;pyenv install $version
 
