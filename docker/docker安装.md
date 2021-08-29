@@ -58,6 +58,7 @@ sudo apt-get install \
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 ```
 2.3. searching for the last 8 characters of the fingerprint
+
 ```
 sudo apt-key fingerprint 0EBFCD88
 ```
@@ -71,6 +72,7 @@ sudo add-apt-repository \
 ### 3. INSTALL DOCKER CE
 
 3.1. Update the apt package index
+
 ```
 sudo apt-get update
 ```
@@ -78,6 +80,15 @@ sudo apt-get update
 ```
 sudo apt-get install docker-ce
 ```
+3.2.1 E: Package 'docker-ce' has no installation candidate
+```
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu `lsb_release -cs` test"
+sudo apt update
+sudo apt install docker-ce
+```
+
 3.3. test
 
 ```
